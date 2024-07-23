@@ -1,5 +1,5 @@
 import React from "react";
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/clerk-react';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
 import './auth.css'
 
 
@@ -8,7 +8,7 @@ function Auth() {
         <div className="signInContainer">
                 <SignedOut className="signOut">
                     <div className="signOutContainer">
-                        <SignInButton  mode="modal"><a className="signBtn">SIGN IN</a></SignInButton>
+                        <SignInButton  mode="modal"><span className="signBtn">SIGN IN</span></SignInButton>
                     </div>
                 </SignedOut>
 

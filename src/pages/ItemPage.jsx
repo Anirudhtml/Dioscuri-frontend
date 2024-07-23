@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Nav from "./Nabvar";
 import "./ItemPage.css";
-import { useUser, useSignIn, SignIn } from "@clerk/clerk-react";
+import { useUser, SignIn } from "@clerk/clerk-react";
 
 function ItemPage({ productData }) {
   const { productId } = useParams();
@@ -76,9 +76,6 @@ function ItemPage({ productData }) {
             </span>
             <br />
             <br />
-            <a>
-              <strong>See more</strong>
-            </a>
           </div>
           <hr />
           <div className="rightContainerDown">

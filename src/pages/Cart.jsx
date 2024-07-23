@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import SmallNav from "./nav_small";
 import { useUser } from "@clerk/clerk-react";
 import { useCart } from "../contexts/CartContext";
@@ -47,7 +47,7 @@ function Cart() {
                   <img
                     className="itemImage"
                     src={item.productId.product_img}
-                    alt="Product Image"
+                    alt={item.productId.name}
                   />
                 </div>
                 <div className="productInfo">
@@ -58,13 +58,13 @@ function Cart() {
                     <p>{item.size} Size</p>
                   </div>
                   <br />
-                  <a
+                  <span
                     className="crossBtn"
                     onClick={() => handleDelete(item.productId._id)}
                   >
                     {" "}
                     ╳{" "}
-                  </a>
+                  </span>
                 </div>
                 <div className="addItem">
                   <button className="btn">-</button>

@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, { createContext, useState, useContext, useEffect, useCallback } from "react";
 import { useUser } from "@clerk/clerk-react";
 
 const CartContext = createContext();
@@ -8,7 +8,7 @@ export function CartProvider({children}) {
     const [cart, setCart] = useState([]);
     const { user } = useUser();
 
-    async function fetchCart() {
+    const fetchCart = useCallback(async () => {
         if (!user) return;
         try {
           const response = await fetch(`http://diocuri-backend-env.eba-hr2msycm.ca-central-1.elasticbeanstalk.com/cart/${user.id}`);
@@ -22,7 +22,7 @@ export function CartProvider({children}) {
         } catch (err) {
           console.log("error fetching data", err);
         }
-      }
+      }, [user]); // Add `user` as a dependency so it updates when `user` changes
     
       useEffect(() => {
         fetchCart();
