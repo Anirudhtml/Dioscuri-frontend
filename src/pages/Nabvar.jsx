@@ -20,7 +20,7 @@ function Nav({ color }) {
 
     if (query.length > 0) {
       try {
-        const response = await fetch(`http://diocuri-backend-env.eba-hr2msycm.ca-central-1.elasticbeanstalk.com/search?q=${query}`);
+        const response = await fetch(`https://diocuri-backend-env.eba-hr2msycm.ca-central-1.elasticbeanstalk.com/search?q=${query}`);
         const result = await response.json();
         setSearchResult(result);
         console.log(result);

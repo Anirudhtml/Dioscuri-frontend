@@ -25,7 +25,7 @@ function ItemPage({ productData }) {
 
   async function handleAdd(productId, userId, quantity, size) {
     try {
-      const response = await fetch("http://diocuri-backend-env.eba-hr2msycm.ca-central-1.elasticbeanstalk.com/cart", {
+      const response = await fetch("https://diocuri-backend-env.eba-hr2msycm.ca-central-1.elasticbeanstalk.com/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

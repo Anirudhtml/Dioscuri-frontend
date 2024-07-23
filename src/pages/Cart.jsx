@@ -11,7 +11,7 @@ function Cart() {
   async function handleDelete(productId) {
     try {
       const response = await fetch(
-        `http://diocuri-backend-env.eba-hr2msycm.ca-central-1.elasticbeanstalk.com/cart/${user.id}/${productId}`,
+        `https://diocuri-backend-env.eba-hr2msycm.ca-central-1.elasticbeanstalk.com/cart/${user.id}/${productId}`,
         {
           method: "DELETE",
         }
