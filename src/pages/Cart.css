@@ -1,0 +1,116 @@
+.cartContainer {
+    border: 1px solid black;
+    min-height: 400px; /* Changed from fixed height */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto; /* Added to allow scrolling */
+    max-height: 80vh; /* Limit maximum height to 80% of viewport height */
+}
+
+.cartWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid black;
+    min-height: 200px; /* Changed from fixed height */
+    width: 250px;
+    padding: 20px 0; /* Added padding for better spacing */
+}
+
+.productInfo {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.addItem {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.productText {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.addItem p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn {
+    width: 30px;
+    cursor: pointer;
+}
+
+.crossBtn {
+    margin-left: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.crossBtn:hover {
+    opacity: 0.6;
+}
+
+
+.emptyText {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10%;
+}
+
+@media only screen and (max-width: 800px) {
+    .cartContainer {
+        padding: 5px;
+        border: none;
+        align-items: flex-start; /* Changed from center to allow natural flow */
+        justify-content: center;
+        overflow-y: auto; /* Ensure scrolling on mobile */
+    }
+
+    .cartWrapper {
+        width: 90%; /* Increased from 70% for better mobile view */
+        /* border: 1px solid black; */
+        margin-bottom: 10px;
+        min-height: auto; /* Allow natural height */
+        padding: 15px; /* Added padding for better spacing */
+    }
+
+    .productInfo {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+
+    .addItem {
+        margin: 10px 0; /* Add vertical spacing */
+    }
+
+    .productText {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+
+    .addItem p {
+        font-size: 16px; /* Adjust font size for better readability */
+    }
+
+    .btn {
+        width: 30px;
+        height: 30px; /* Adjust size for mobile */
+        font-size: 20px; /* Increase font size for better touch usability */
+    }
+
+    .crossBtn {
+        margin-top: 10px; /* Adjust margin for mobile */
+    }
+
+    .emptyText {
+        margin-top: 20px; /* Adjust margin for better spacing */
+    }
+}

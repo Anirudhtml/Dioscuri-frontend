@@ -1,0 +1,27 @@
+.smallNavContainer {
+    display: flex;
+    justify-content: space-between; /* Change from space-around to space-between */
+    align-items: center;
+    padding: 20px 20px; /* Add some padding on the sides */
+    position: relative; /* Add this */
+    height: 50px; /* Set a fixed height */
+}
+
+.smallNavContainer a {
+    color: rgb(75, 75, 75);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.titleNav {
+    position: absolute; /* Position absolutely within the container */
+    left: 50%; /* Move to the center */
+    transform: translateX(-50%); /* Center perfectly */
+}
+
+#titleNav {
+    font-family: "Bodoni Moda SC", serif;
+    font-size: 40px;
+    text-decoration: none;
+}

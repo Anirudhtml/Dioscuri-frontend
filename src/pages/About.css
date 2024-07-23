@@ -1,0 +1,17 @@
+.heading {
+    font-weight: 100;
+    font-family: "Bodoni Moda SC", serif;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: medium;
+}
+
+.subPara {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}
+
+.aboutContainer {
+    padding: 50px;
+    text-align: center;
+}

@@ -1,0 +1,47 @@
+.newsLetterContainer {
+    height: 100vh;
+    padding: 50px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    top: 100vh;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, top 0.5s ease-out;
+    z-index: 1000;
+
+    color: rgb(0, 0, 0);
+}
+
+.newsLetterContainer.visible {
+    opacity: 1;
+    transform: translateY(0);
+    top: 0;
+}
+
+.newsletterWrapper {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 30%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialLinks {
+    margin-top: 60px;
+}
+
+.links {
+    margin-right: 10px;
+}
+
+.termsLinks {
+    margin-top: 20%;
+}
+
+@media only screen and (max-width: 800px) {
+    .newsletterWrapper {
+        margin-top: 60%;
+    }
+}

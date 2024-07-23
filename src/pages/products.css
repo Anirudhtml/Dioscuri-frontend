@@ -1,0 +1,67 @@
+.productWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Added to distribute space */
+}
+
+.productOutsideContainer {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.895);
+    text-align: center;
+    padding: 50px;
+}
+
+.productContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px; /* Fixed width to maintain consistency */
+    margin: 10px; /* Added margin for spacing between containers */
+}
+
+.product-img {
+    max-width: 80%;
+    margin-top: 40px;
+    height: 250px;
+    object-fit: cover; /* Ensures the image covers the container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.containerTitle {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.productName {
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center; /* Center text alignment */
+}
+
+.priceTag {
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center; /* Center text alignment */
+}
+
+.featuredProdcontainer {
+    background-color: transparent;
+    padding: 20px;
+    top: 50%;
+}
+
+#nvText {
+    color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+}
