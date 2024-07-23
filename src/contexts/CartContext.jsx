@@ -11,7 +11,7 @@ export function CartProvider({children}) {
     const fetchCart = useCallback(async () => {
         if (!user) return;
         try {
-          const response = await fetch(`http://diocuri-backend-env.eba-hr2msycm.ca-central-1.elasticbeanstalk.com/cart/${user.id}`);
+          const response = await fetch(`https://diocuri-backend-env.eba-hr2msycm.ca-central-1.elasticbeanstalk.com/cart/${user.id}`);
     
           if (!response.ok) {
             throw new Error('Network response was not ok');
