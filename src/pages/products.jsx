@@ -49,7 +49,7 @@ function Product() {
       <div className="productWrapper">
         {featured_data.map((item) => (
           <div key={item.id} className="productContainer">
-            <img onClick={handleClick} className="product-img" src={item.image}></img>
+            <img onClick={handleClick} className="product-img" alt={item.name} src={item.image}></img>
             <h2 className="productName">{item.name}</h2>
             <h3 className="priceTag">$ {item.price}</h3>
           </div>

@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from "react";
-
 import Auth from "../auth/auth";
 import { useCart } from "../contexts/CartContext";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 function Nav({ color }) {
-  const [isVisible, setIsVisible] = useState(true);
   const [showHamburger, setShowHamburger] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
+  const [isMobile] = useState(window.innerWidth <= 768);
   const [searchResult, setSearchResult] = useState([]);
   const { cart } = useCart();
 
   function toggleHamburger() {
     setShowHamburger(!showHamburger);
-    console.log("hambeerger pressed");
+    console.log("hamburger pressed");
   }
 
   async function handleChange(event) {
@@ -39,12 +36,9 @@ function Nav({ color }) {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
       const triggerPosition = document.documentElement.scrollHeight - 1150;
-      const showPosition = 100;
 
       if (scrollPosition >= triggerPosition) {
-        setIsVisible(false);
-      } else if (window.screenY < showPosition) {
-        setIsVisible(true);
+        setShowHamburger(false);
       }
     };
 
@@ -64,8 +58,8 @@ function Nav({ color }) {
                 <div className="hamburger" onClick={toggleHamburger}>
                   {showHamburger ? (
                     <>
-                      <div class="closeDiv_1"></div>
-                      <div class="closeDiv_2"></div>
+                      <div className="closeDiv_1"></div>
+                      <div className="closeDiv_2"></div>
                     </>
                   ) : (
                     <>
@@ -75,11 +69,9 @@ function Nav({ color }) {
                     </>
                   )}
                 </div>
-                
                 <Auth />
               </div>
               <div className={`mobileMenu ${showHamburger ? "open" : ""}`}>
-                
                 <ul>
                   <li>
                     <a href="/">HOME</a>
@@ -123,7 +115,7 @@ function Nav({ color }) {
                   />
                   <div className="searchContainer">
                     {searchResult.map((item) => (
-                      <Link to={`/product/${item._id}`}>
+                      <Link to={`/product/${item._id}`} key={item._id}>
                         <div className="searchItem">
                           <img
                             className="searchImg"
@@ -140,7 +132,7 @@ function Nav({ color }) {
               </div>
               <ul className={`navItemsRight ${color}`}>
                 <li>
-                    <Auth />
+                  <Auth />
                 </li>
                 <li>
                   <a href="/About">ABOUT</a>
