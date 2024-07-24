@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("https://diocuri-backend-env.eba-hr2msycm.ca-central-1.elasticbeanstalk.com/products", {
+        const response = await fetch("https://dioscuri-backend-d32656647d57.herokuapp.com/products", {
           method: "GET",
         });
         if (!response.ok) {
