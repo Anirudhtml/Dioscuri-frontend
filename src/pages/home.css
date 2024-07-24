@@ -10,7 +10,7 @@
 @media only screen and (max-width: 800px) {
     .home {
         background-image: url('../../public/bg_mobile.jpg');
-        background-size: auto; /* Changed from cover to contain */
+        background-size: contain; /* Changed from cover to contain */
         background-position: top;
         background-repeat: no-repeat;
         /* background-attachment: scroll; Changed from fixed to scroll */
