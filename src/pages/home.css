@@ -4,14 +4,16 @@
     background-position: center;
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-attachment: fixed; /* Make the background image fixed */
+    min-height: 100vh;
 }
 
 @media only screen and (max-width: 800px) {
     .home {
         background-image: url('../../public/bg_mobile.jpg');
-        background-size: cover; /* Ensure the entire background image is visible */
-        background-position: center; /* Center the background image */
-        background-repeat: no-repeat; /* Prevent the image from repeating */
-        background-attachment: fixed; /* Make the background image fixed */
+        background-size: contain; /* Changed from cover to contain */
+        background-position: center;
+        background-repeat: no-repeat;
+        /* background-attachment: scroll; Changed from fixed to scroll */
+        min-height: 100vh;
     }
 }
