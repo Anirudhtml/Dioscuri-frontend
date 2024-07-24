@@ -4,7 +4,7 @@
 }
 
 html,
-body {
+body, #root {
   width: 100%; /* Ensure html and body take up the full height */
   padding: 0; /* Remove default padding */
   box-sizing: border-box;
@@ -12,6 +12,10 @@ body {
   
 }
 
+body {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
 #col {
   width: 50%;

@@ -4,7 +4,7 @@
     color: #fbff00;
     font-family: "Bodoni Moda SC", serif;
     font-size: 150px;
-    font-optical-sizing: auto;
+    /* font-optical-sizing: auto; */
     font-weight: 500;
     font-style: normal;
     text-align: center;
@@ -14,7 +14,7 @@
 }
 
 .titleWrapper {
-    height: 800px;
+    min-height: 100vh; /* Changed from fixed height to minimum height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,8 +28,12 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media (max-width: 800px) {
     .title {
         font-size: 60px;
+    }
+
+    .titleWrapper {
+        min-height: 100vh; /* Changed from fixed height to minimum height */
     }
 }
