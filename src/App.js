@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("https://dioscuri-backend-d32656647d57.herokuapp.com/products", {
+        const response = await fetch("http://localhost:3000/products", {
           method: "GET",
         });
         if (!response.ok) {
