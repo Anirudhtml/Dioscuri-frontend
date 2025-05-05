@@ -11,7 +11,7 @@ export function CartProvider({children}) {
     const fetchCart = useCallback(async () => {
         if (!user) return;
         try {
-          const response = await fetch(`https://dioscuri-backend-d32656647d57.herokuapp.com/cart/${user.id}`);
+          const response = await fetch(`http://localhost:3000/cart/${user.id}`);
     
           if (!response.ok) {
             throw new Error('Network response was not ok');
