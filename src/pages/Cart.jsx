@@ -11,7 +11,7 @@ function Cart() {
   async function handleDelete(productId) {
     try {
       const response = await fetch(
-        `https://dioscuri-backend-d32656647d57.herokuapp.com/cart/${user.id}/${productId}`,
+        `http://localhost:3000/cart/${user.id}/${productId}`,
         {
           method: "DELETE",
         }
