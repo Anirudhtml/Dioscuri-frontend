@@ -25,7 +25,7 @@ function ItemPage({ productData }) {
 
   async function handleAdd(productId, userId, quantity, size) {
     try {
-      const response = await fetch("https://dioscuri-backend-d32656647d57.herokuapp.com/cart", {
+      const response = await fetch("http://localhost:3000/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
